@@ -229,7 +229,7 @@ function dig()
         end
 
 --calls the fuelinfo function.
-fuelInfo()
+fuelInfo() 
 
 --calls the dig function.
 dig()
