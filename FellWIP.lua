@@ -58,51 +58,64 @@ function chop()
                     turtle.turnRight()
                     y = y + 1
                 elseif data.name == "minecraft:spruce_leaves" then
-                            while y > 0 do
-                                turtle.down()
-                                y = y - 1
-                                if y == 0 and doforever == "yes" then
-                                    turtle.place(2)
-                                    turtle.turnRight()
+                    turtle.dig()
+                    turtle.forward()
+                    turtle.turnRight()
+                    turtle.dig()
+                    turtle.forward()
+                    turtle.turnRight()
+                    turtle.dig()
+                    turtle.forward()
+                    turtle.turnRight()
+                    turtle.forward()
+                    turtle.turnRight()
+                        while y > 0 do
+                            turtle.down()
+                            y = y - 1
+                            if y == 0 and doforever == "yes" then
+                                turtle.place(2)
+                                turtle.turnRight()
+                                turtle.forward()
+                                turtle.turnLeft()
+                                turtle.place(2)
+                                turtle.back()
+                                turtle.place(2)
+                                turtle.turnLeft()
+                                turtle.forward()
+                                turtle.turnRight()
+                                turtle.place(2)
+                                turtle.turnLeft()
+                                for i = 1, 4, 1 do
                                     turtle.forward()
-                                    turtle.turnLeft()
-                                    turtle.place(2)
-                                    turtle.back()
-                                    turtle.place(2)
-                                    turtle.turnLeft()
-                                    turtle.forward()
-                                    turtle.turnRight()
-                                    turtle.place(2)
-                                    turtle.turnLeft()
-                                    for i = 1, 4, 1 do
-                                        turtle.forward()
-                                    end
-                                    turtle.turnRight()
-                                    for i = 1, 5, 1 do
-                                        turtle.forward()
-                                    end
-                                    turtle.turnRight()
-                                    
-                                    circle = 9
-                                    while circle > 3 do
-                                        for ii = 1, circle, -1 do
-                                            turtle.forward()
-                                            turtle.suck()
-                                        end
-                                        turtle.turnRight()
-                                        circle = circle - 1
-                                    end
-                                    
-                                    turtle.turnRight()
-                                    turtle.forward()
-                                    wood = "false"
                                 end
+                                turtle.turnRight()
+                                for i = 1, 5, 1 do
+                                    turtle.forward()
+                                end
+                                turtle.turnRight()
+                                
+                                circle = 9
+                                while circle > 3 do
+                                    for ii = 1, circle, -1 do
+                                        turtle.forward()
+                                        turtle.suck()
+                                    end
+                                    turtle.turnRight()
+                                    circle = circle - 1
+                                end
+                                
+                                turtle.turnRight()
+                                do 
+                                turtle.forward()                                  
+                                wood = "false"
                             end
                         end
                     end
+                end
             end
         end
     end
+end
 
 fuelInfo()
 
